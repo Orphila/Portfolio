@@ -1,6 +1,6 @@
 #---------------Construction app st-----------------------------------------
 import streamlit as st  
-import plotly.express as px  
+#import plotly.express as px  
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Comparatif portfolio/ETF ", 
