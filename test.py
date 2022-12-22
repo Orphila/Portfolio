@@ -164,7 +164,7 @@ if date_fin in liste_jours_ouvrés():
                                      'BTC',
                                      'Portfolio'],
                      title='Comparatif portfolio/indices',
-                     width=560,
+                     width=750,
                      labels={
                          "value" : "valeur investissement ($)",
                          "x" : "Dates",
@@ -182,8 +182,8 @@ if date_fin in liste_jours_ouvrés():
     
     X=[CR[k][-1] for k in range(len(CR))]
     NAMES=['LINK','ETH','BTC','AVAX','THETER']
-    fromage = px.pie(values=X, names=NAMES,title="Répartition du portfolio")
-    left_column, right_column = st.columns(2)
+    fromage = px.pie(values=X, names=NAMES,title="Répartition du portfolio",width=450)
+    left_column, right_column = st.columns([2,1])
     left_column.plotly_chart(courbe)
     right_column.plotly_chart(fromage)
     
