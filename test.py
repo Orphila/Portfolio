@@ -17,7 +17,7 @@ def liste_jours_ouvrés():
     list_jours_ouvres = list(
         map(
             lambda x: x.date(),
-            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=12, day=1, days=-1),
+            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=24, day=1, days=-1),
                   byweekday=[MO, TU, WE, TH, FR])
         )
     )
