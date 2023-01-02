@@ -1,4 +1,3 @@
-#---------------Construction app st-----------------------------------------
 import streamlit as st  
 import plotly.express as px  
 
@@ -17,7 +16,7 @@ def liste_jours_ouvrés():
     list_jours_ouvres = list(
         map(
             lambda x: x.date(),
-            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=24, day=1, days=-1),
+            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=12, day=1, days=-1),
                   byweekday=[MO, TU, WE, TH, FR])
         )
     )
@@ -28,7 +27,20 @@ def liste_jours_ouvrés():
 st.title(":bar_chart: Comparatif portfolio/ETF pour 1000$ investis")
 st.markdown("##")
 date_debut="2022-4-20"
-date_fin=liste_jours_ouvrés()[-1]
+
+from datetime import datetime, timedelta
+test_date=datetime.now()
+diff = 1
+if test_date.weekday() == 0:
+    diff = 3
+elif test_date.weekday() == 6:
+    diff = 2
+else :
+    diff = 1
+
+res = test_date - timedelta(days=diff)
+date_fin=str(res)[:10]
+
 
 if date_fin in liste_jours_ouvrés():
     #--------------------------création du dataset avec yahoo finance--------------
