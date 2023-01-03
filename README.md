@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio fictif
 Il s'agit de la première version d'un simulateur de rendements boursiers. Cette webapp compare l'évolutions d'un portfolio 
 composé de plusieurs cryptomonaies choisies arbitrairement au préalable (Bitcoin, theta, Avalanche, etherum et link).
 Le but est d'évaluer la performance qu'aurait eu ce portfolio depuis avril, et de comparer celles-ci avec les rendements
