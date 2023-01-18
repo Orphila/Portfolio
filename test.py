@@ -16,7 +16,7 @@ def liste_jours_ouvrés():
     list_jours_ouvres = list(
         map(
             lambda x: x.date(),
-            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=12, day=1, days=-1),
+            rrule(DAILY, dtstart=dtstart, until=dtstart + relativedelta(months=24, day=1, days=-1),
                   byweekday=[MO, TU, WE, TH, FR])
         )
     )
@@ -42,7 +42,7 @@ res = test_date - timedelta(days=diff)
 date_fin=str(res)[:10]
 
 if date_fin not in liste_jours_ouvrés():
-    date_fin="2023-01-18"
+    date_fin="2023-01-15"
 
 if date_fin in liste_jours_ouvrés():
     #--------------------------création du dataset avec yahoo finance--------------
