@@ -42,7 +42,7 @@ res = test_date - timedelta(days=diff)
 date_fin=str(res)[:10]
 
 if date_fin not in liste_jours_ouvrés():
-    date_fin="2022-12-29"
+    date_fin="2023-01-18"
 
 if date_fin in liste_jours_ouvrés():
     #--------------------------création du dataset avec yahoo finance--------------
