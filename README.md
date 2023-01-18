@@ -9,4 +9,4 @@ afin d'évaluer l'utilité de varier son invesstissement et de faire des recherc
 <img width="854" alt="image" src="https://user-images.githubusercontent.com/120557052/213307621-2e187f13-0042-4afd-8ab4-83962c0c6193.png">
 
 
-On peut consulter le dashboiard sur ce lien : https://orphila-portfolio-test-ryt3xw.streamlit.app/
+On peut consulter le dashboard sur ce lien : https://orphila-portfolio-test-ryt3xw.streamlit.app/
