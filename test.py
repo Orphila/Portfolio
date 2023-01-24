@@ -28,21 +28,7 @@ st.title(":bar_chart: Comparatif portfolio/ETF pour 1000$ investis")
 st.markdown("##")
 date_debut="2022-4-20"
 
-from datetime import datetime, timedelta
-test_date=datetime.now()
-diff = 1
-if test_date.weekday() == 0:
-    diff = 3
-elif test_date.weekday() == 6:
-    diff = 2
-else :
-    diff = 1
-
-res = test_date - timedelta(days=diff)
-date_fin=str(res)[:10]
-
-if date_fin not in liste_jours_ouvrés():
-    date_fin="2023-01-22"
+date_fin=liste_jours_ouvrés()[-1]
 
 if date_fin in liste_jours_ouvrés():
     #--------------------------création du dataset avec yahoo finance--------------
